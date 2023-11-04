@@ -2363,11 +2363,32 @@ end
 
 # Better GDB defaults ----------------------------------------------------------
 
-set history save
-set verbose off
-set print pretty on
+# Display.
+set demangle-style gnu-v3
+
+set listsize 20
+
+set pagination off
+
 set print array off
 set print array-indexes on
+set print demangle on
+set print pretty on
+set print object on
+set print sevenbit-strings off
+set print static-members on
+set print vtbl on
+
+set verbose off
+
+# History.
+set history expansion on
+set history filename ~/.gdb_history
+set history remove-duplicates 100
+set history save on
+set history size 10000
+
+# Python.
 set python print-stack full
 
 # Start ------------------------------------------------------------------------
