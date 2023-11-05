@@ -1,0 +1,26 @@
+# Define possible profiles.
+define default-profile
+    dashboard -layout source stack
+end
+
+define verbose-profile
+    dashboard -layout source stack breakpoints threads assembly registers memory expressions history
+end
+
+# Define additional CLI commands.
+define dd
+    dashboard
+end
+
+# Define dashboard styles.
+dashboard source -style height 20
+dashboard source -style path True
+
+dashboard stack -style arguments True
+dashboard stack -style compact True
+dashboard stack -style limit 20
+dashboard stack -style locals True
+dashboard stack -style sort True
+
+# Set the startup profile.
+default-profile
